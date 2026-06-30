@@ -6,9 +6,10 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TechNova | DevOps Deployment Platform</title>
+<title>TechNova | DevOps SaaS Platform</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -16,557 +17,17 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet" href="css/style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-
-background:#070B14;
-overflow-x:hidden;
-color:white;
-
-background-image:
-
-radial-gradient(circle at top left,
-rgba(80,120,255,.18),
-transparent 35%),
-
-radial-gradient(circle at bottom right,
-rgba(0,180,255,.08),
-transparent 30%);
-
-}
-
-
-/* ==========================
-      NAVBAR
-========================== */
-
-nav{
-
-position:fixed;
-
-top:20px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:92%;
-
-padding:18px 55px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(15px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:60px;
-
-z-index:999;
-
-transition:.4s;
-
-}
-
-.logo{
-
-font-size:30px;
-
-font-weight:800;
-
-color:#64A7FF;
-
-letter-spacing:1px;
-
-}
-
-nav ul{
-
-display:flex;
-
-list-style:none;
-
-gap:40px;
-
-}
-
-nav ul li a{
-
-text-decoration:none;
-
-color:white;
-
-font-weight:500;
-
-transition:.3s;
-
-}
-
-nav ul li a:hover{
-
-color:#64A7FF;
-
-}
-
-
-/* ==========================
-      HERO
-========================== */
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:140px 10%;
-
-position:relative;
-
-text-align:center;
-
-}
-
-.hero-content{
-
-max-width:900px;
-
-animation:fadeUp 1.2s ease;
-
-}
-
-.hero h1{
-
-font-size:78px;
-
-line-height:90px;
-
-font-weight:800;
-
-margin-bottom:25px;
-
-}
-
-.hero h1 span{
-
-color:#5FA6FF;
-
-}
-
-.hero p{
-
-font-size:20px;
-
-line-height:36px;
-
-color:#B7C0D6;
-
-margin-bottom:45px;
-
-}
-
-
-/* Buttons */
-
-.hero-buttons{
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-.btn{
-
-padding:17px 34px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:.35s;
-
-}
-
-.primary{
-
-background:#4F8CFF;
-
-color:white;
-
-box-shadow:0 10px 40px rgba(79,140,255,.35);
-
-}
-
-.primary:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 25px 60px rgba(79,140,255,.45);
-
-}
-
-.secondary{
-
-border:1px solid rgba(255,255,255,.15);
-
-background:rgba(255,255,255,.04);
-
-color:white;
-
-}
-
-.secondary:hover{
-
-background:rgba(255,255,255,.08);
-
-transform:translateY(-6px);
-
-}
-
-
-/* Floating Blur */
-
-.blur1{
-
-position:absolute;
-
-width:350px;
-
-height:350px;
-
-background:#2F6DFF;
-
-filter:blur(170px);
-
-opacity:.18;
-
-top:100px;
-
-left:-80px;
-
-}
-
-.blur2{
-
-position:absolute;
-
-width:300px;
-
-height:300px;
-
-background:#00D4FF;
-
-filter:blur(170px);
-
-opacity:.10;
-
-bottom:50px;
-
-right:-100px;
-
-}
-
-
-/* Scroll */
-
-.scroll{
-
-position:absolute;
-
-bottom:40px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-font-size:15px;
-
-color:#7F8CA5;
-
-animation:float 2s infinite;
-
-}
-
-
-/* Animations */
-
-@keyframes fadeUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(60px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-@keyframes float{
-
-0%{
-
-transform:translate(-50%,0);
-
-}
-
-50%{
-
-transform:translate(-50%,10px);
-
-}
-
-100%{
-
-transform:translate(-50%,0);
-
-}
-
-}
-
-.section{
-
-padding:120px 9%;
-
-}
-
-.section-title{
-
-text-align:center;
-
-font-size:48px;
-
-margin-bottom:70px;
-
-font-weight:700;
-
-}
-.features{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-margin-top:40px;
-
-}
-
-.card{
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:24px;
-
-padding:40px 30px;
-
-backdrop-filter:blur(20px);
-
-transition:.4s;
-
-cursor:pointer;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 20px 60px rgba(79,140,255,.20);
-
-border-color:rgba(79,140,255,.35);
-
-}
-
-.card-icon{
-
-font-size:48px;
-
-margin-bottom:25px;
-
-}
-
-.card h3{
-
-font-size:24px;
-
-margin-bottom:15px;
-
-color:#66A8FF;
-
-}
-
-.card p{
-
-line-height:30px;
-
-color:#B6C1D7;
-
-}
-
-
-/* ===============================
-      PIPELINE
-===============================*/
-
-.pipeline{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-wrap:wrap;
-
-gap:18px;
-
-margin-top:60px;
-
-}
-
-.step{
-
-padding:22px 34px;
-
-border-radius:20px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.08);
-
-font-weight:600;
-
-transition:.35s;
-
-}
-
-.step:hover{
-
-background:#4F8CFF;
-
-transform:translateY(-6px);
-
-}
-
-.arrow{
-
-font-size:28px;
-
-color:#66A8FF;
-
-}
-
-
-/* ===============================
-      STATS
-===============================*/
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:30px;
-
-margin-top:60px;
-
-}
-
-.stat{
-
-background:rgba(255,255,255,.05);
-
-padding:40px;
-
-border-radius:22px;
-
-text-align:center;
-
-border:1px solid rgba(255,255,255,.08);
-
-transition:.35s;
-
-}
-
-.stat:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 20px 50px rgba(79,140,255,.20);
-
-}
-
-.stat h1{
-
-font-size:54px;
-
-margin-bottom:10px;
-
-color:#66A8FF;
-
-}
-
-.stat p{
-
-color:#AAB8D1;
-
-font-size:18px;
-
-}
-
-
-/* ===============================
-      HTML STARTS
-===============================*/
-
-</style>
+<link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
 <body>
 
-<div class="blur1"></div>
+<div class="bg-circle circle1"></div>
 
-<div class="blur2"></div>
+<div class="bg-circle circle2"></div>
 
 <nav>
 
@@ -582,169 +43,244 @@ TechNova
 
 <li><a href="#features">Features</a></li>
 
-<li><a href="#pipeline">Pipeline</a></li>
+<li><a href="#solutions">Solutions</a></li>
 
-<li><a href="#stats">Stats</a></li>
+<li><a href="#pricing">Pricing</a></li>
 
-<li><a href="#">Contact</a></li>
+<li><a href="#contact">Contact</a></li>
 
 </ul>
+
+<a href="#" class="nav-btn">
+
+Start Free
+
+</a>
 
 </nav>
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-left">
+
+<span class="badge">
+
+🚀 Trusted by DevOps Teams Worldwide
+
+</span>
 
 <h1>
 
-Deploy
+Deploy.
 
-<span>Smarter.</span>
+Scale.
 
-<br>
+Automate.
 
-Build
-
-<span>Faster.</span>
+<span>Everything.</span>
 
 </h1>
 
 <p>
 
-A complete DevOps deployment pipeline powered by
-
-GitHub,
-
-Jenkins,
-
-Maven,
-
-AWS,
-
-Tomcat,
-
-Nginx,
-
-Launch Templates,
-
-Auto Scaling Groups
-
-and
-
-Application Load Balancer.
+A premium DevOps platform built for modern engineering teams.
+Automate your CI/CD pipeline with GitHub, Jenkins, Maven,
+Docker, Kubernetes, AWS, Terraform and Nginx.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="btn primary">
+<a href="#" class="primary-btn">
 
-🚀 Deploy Successfully
+Start Free
 
 </a>
 
-<a href="#pipeline" class="btn secondary">
+<a href="#" class="secondary-btn">
 
-View Pipeline
+View Demo
 
 </a>
 
 </div>
 
+<div class="hero-stats">
+
+<div>
+
+<h2>15K+</h2>
+
+<p>Deployments</p>
+
 </div>
 
-<div class="scroll">
+<div>
 
-Scroll ↓
+<h2>99.99%</h2>
+
+<p>Uptime</p>
+
+</div>
+
+<div>
+
+<h2>180+</h2>
+
+<p>Countries</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="dashboard">
+
+<div class="dashboard-top">
+
+<span class="red"></span>
+
+<span class="yellow"></span>
+
+<span class="green"></span>
+
+</div>
+
+<div class="terminal">
+
+<p>> Connecting to GitHub...</p>
+
+<p>> Jenkins Pipeline Started...</p>
+
+<p>> Maven Build Successful...</p>
+
+<p>> Docker Image Created...</p>
+
+<p>> Uploading to AWS...</p>
+
+<p>> Launching EC2...</p>
+
+<p class="success">
+
+✔ Deployment Successful
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 <section class="section" id="features">
+      <div class="section-heading">
 
-<h2 class="section-title">
+<span class="mini-title">
 
-Powerful Features
+FEATURES
+
+</span>
+
+<h2>
+
+Everything Your DevOps Team Needs
 
 </h2>
 
-<div class="features">
-
-<div class="card">
-
-<div class="card-icon">⚡</div>
-
-<h3>CI / CD</h3>
-
 <p>
 
-Automatic deployment using GitHub,
-
-Jenkins,
-
-Maven,
-
-and AWS.
+Automate every stage of your software delivery lifecycle with one powerful platform.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="feature-grid">
 
-<div class="card-icon">☁️</div>
+<div class="feature-card">
 
-<h3>AWS Infrastructure</h3>
+<div class="icon">⚡</div>
+
+<h3>Lightning Fast CI/CD</h3>
 
 <p>
 
-EC2,
-
-Application Load Balancer,
-
-Launch Templates,
-
-Golden AMIs,
-
-Auto Scaling.
+Automatically build, test and deploy every commit using GitHub, Jenkins and Maven.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="feature-card">
 
-<div class="card-icon">🔒</div>
+<div class="icon">☁️</div>
 
-<h3>Secure Deployment</h3>
+<h3>AWS Native</h3>
 
 <p>
 
-IAM Roles,
-
-Security Groups,
-
-Private Networking,
-
-Production Ready.
+Deploy seamlessly to EC2, ALB, Auto Scaling Groups, S3 and Route53.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="feature-card">
 
-<div class="card-icon">🚀</div>
+<div class="icon">🐳</div>
 
-<h3>Zero Downtime</h3>
+<h3>Docker Ready</h3>
 
 <p>
 
-Rolling deployment using Golden AMIs
+Containerize applications and deploy consistently across every environment.
 
-with Auto Scaling Groups.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">☸️</div>
+
+<h3>Kubernetes</h3>
+
+<p>
+
+Scale workloads automatically with production-ready Kubernetes clusters.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">🔒</div>
+
+<h3>Enterprise Security</h3>
+
+<p>
+
+IAM integration, encrypted secrets, SSL certificates and role-based access.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">📈</div>
+
+<h3>Real-Time Monitoring</h3>
+
+<p>
+
+Track deployments, infrastructure health and application performance instantly.
 
 </p>
 
@@ -754,85 +290,153 @@ with Auto Scaling Groups.
 
 </section>
 
-<section class="section" id="pipeline">
+<section class="section" id="solutions">
 
-<h2 class="section-title">
+<div class="section-heading">
 
-Deployment Pipeline
+<span class="mini-title">
+
+PIPELINE
+
+</span>
+
+<h2>
+
+Complete Deployment Workflow
 
 </h2>
+
+<p>
+
+From code commit to production deployment in one automated pipeline.
+
+</p>
+
+</div>
 
 <div class="pipeline">
 
-<div class="step">GitHub</div>
+<div class="pipeline-box">
 
-<div class="arrow">➜</div>
+<div class="pipeline-icon">💻</div>
 
-<div class="step">Jenkins</div>
+<h4>Developer</h4>
 
-<div class="arrow">➜</div>
+</div>
 
-<div class="step">Maven</div>
+<div class="pipeline-arrow">➜</div>
 
-<div class="arrow">➜</div>
+<div class="pipeline-box">
 
-<div class="step">S3</div>
+<div class="pipeline-icon">🐙</div>
 
-<div class="arrow">➜</div>
+<h4>GitHub</h4>
 
-<div class="step">Tomcat</div>
+</div>
 
-<div class="arrow">➜</div>
+<div class="pipeline-arrow">➜</div>
 
-<div class="step">Golden AMI</div>
+<div class="pipeline-box">
 
-<div class="arrow">➜</div>
+<div class="pipeline-icon">⚙️</div>
 
-<div class="step">ASG + ALB</div>
+<h4>Jenkins</h4>
+
+</div>
+
+<div class="pipeline-arrow">➜</div>
+
+<div class="pipeline-box">
+
+<div class="pipeline-icon">📦</div>
+
+<h4>Maven</h4>
+
+</div>
+
+<div class="pipeline-arrow">➜</div>
+
+<div class="pipeline-box">
+
+<div class="pipeline-icon">🐳</div>
+
+<h4>Docker</h4>
+
+</div>
+
+<div class="pipeline-arrow">➜</div>
+
+<div class="pipeline-box">
+
+<div class="pipeline-icon">☁️</div>
+
+<h4>AWS</h4>
+
+</div>
+
+<div class="pipeline-arrow">➜</div>
+
+<div class="pipeline-box">
+
+<div class="pipeline-icon">🚀</div>
+
+<h4>Production</h4>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="section" id="stats">
+<section class="section">
 
-<h2 class="section-title">
+<div class="section-heading">
 
-Project Statistics
+<span class="mini-title">
+
+STATS
+
+</span>
+
+<h2>
+
+Built For High Performance
 
 </h2>
 
-<div class="stats">
+</div>
 
-<div class="stat">
+<div class="stats-grid">
 
-<h1>10+</h1>
+<div class="stat-card">
 
-<p>AWS Services</p>
+<h1>15K+</h1>
+
+<p>Successful Deployments</p>
 
 </div>
 
-<div class="stat">
+<div class="stat-card">
 
-<h1>100%</h1>
+<h1>99.99%</h1>
 
-<p>Deployment Success</p>
-
-</div>
-
-<div class="stat">
-
-<h1>0</h1>
-
-<p>Downtime Goal</p>
+<p>Platform Uptime</p>
 
 </div>
 
-<div class="stat">
+<div class="stat-card">
+
+<h1>250+</h1>
+
+<p>Enterprise Customers</p>
+
+</div>
+
+<div class="stat-card">
 
 <h1>24/7</h1>
 
-<p>Production Ready</p>
+<p>Infrastructure Monitoring</p>
 
 </div>
 
@@ -840,36 +444,612 @@ Project Statistics
 
 </section>
 
+<section class="section" id="pricing">
+      <div class="section-heading">
 
-<footer>
+<span class="mini-title">
 
-<div class="footer-container">
+PRICING
 
-<h2>TechNova</h2>
+</span>
+
+<h2>
+
+Simple Pricing For Every Team
+
+</h2>
 
 <p>
 
-Designed for modern DevOps deployment using
-
-GitHub • Jenkins • Maven • AWS • Tomcat • Nginx
+Choose the perfect plan for your DevOps workflow.
 
 </p>
 
-<div class="footer-links">
+</div>
 
-<a href="#">Home</a>
+<div class="pricing-grid">
 
-<a href="#">Features</a>
+<div class="price-card">
 
-<a href="#">Pipeline</a>
+<span class="plan">
 
-<a href="#">Contact</a>
+Starter
+
+</span>
+
+<h1>
+
+$19<span>/month</span>
+
+</h1>
+
+<p>
+
+Perfect for individual developers.
+
+</p>
+
+<ul>
+
+<li>✔ 5 Projects</li>
+
+<li>✔ GitHub Integration</li>
+
+<li>✔ Jenkins Pipelines</li>
+
+<li>✔ Basic Monitoring</li>
+
+<li>✔ Email Support</li>
+
+</ul>
+
+<a href="#" class="price-btn">
+
+Get Started
+
+</a>
 
 </div>
 
-<p class="copyright">
+<div class="price-card popular">
 
-© 2026 TechNova. Built with ❤️ by Abhishek Rao.
+<div class="popular-tag">
+
+Most Popular
+
+</div>
+
+<span class="plan">
+
+Professional
+
+</span>
+
+<h1>
+
+$49<span>/month</span>
+
+</h1>
+
+<p>
+
+Designed for growing engineering teams.
+
+</p>
+
+<ul>
+
+<li>✔ Unlimited Projects</li>
+
+<li>✔ Docker Deployment</li>
+
+<li>✔ Kubernetes Support</li>
+
+<li>✔ AWS Auto Scaling</li>
+
+<li>✔ Load Balancer</li>
+
+<li>✔ Monitoring Dashboard</li>
+
+<li>✔ Priority Support</li>
+
+</ul>
+
+<a href="#" class="price-btn">
+
+Start Now
+
+</a>
+
+</div>
+
+<div class="price-card">
+
+<span class="plan">
+
+Enterprise
+
+</span>
+
+<h1>
+
+Custom
+
+</h1>
+
+<p>
+
+Tailored for enterprise infrastructure.
+
+</p>
+
+<ul>
+
+<li>✔ Unlimited Infrastructure</li>
+
+<li>✔ Multi-Region Deployment</li>
+
+<li>✔ Terraform Automation</li>
+
+<li>✔ Dedicated Support</li>
+
+<li>✔ SLA Guarantee</li>
+
+<li>✔ Custom Integrations</li>
+
+</ul>
+
+<a href="#" class="price-btn">
+
+Contact Sales
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="testimonials">
+
+<div class="section-heading">
+
+<span class="mini-title">
+
+TESTIMONIALS
+
+</span>
+
+<h2>
+
+Trusted By Modern Engineering Teams
+
+</h2>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<p>
+
+"TechNova reduced our deployment time from nearly an hour to under five minutes."
+
+</p>
+
+<div class="testimonial-user">
+
+<div class="avatar">
+
+A
+
+</div>
+
+<div>
+
+<h4>
+
+Alex Morgan
+
+</h4>
+
+<span>
+
+Senior DevOps Engineer
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<p>
+
+"The interface is beautiful, fast and our deployment process is now fully automated."
+
+</p>
+
+<div class="testimonial-user">
+
+<div class="avatar">
+
+S
+
+</div>
+
+<div>
+
+<h4>
+
+Sarah Lee
+
+</h4>
+
+<span>
+
+Cloud Architect
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<p>
+
+"Our AWS infrastructure has never been easier to manage. Absolutely love this platform."
+
+</p>
+
+<div class="testimonial-user">
+
+<div class="avatar">
+
+J
+
+</div>
+
+<div>
+
+<h4>
+
+John Carter
+
+</h4>
+
+<span>
+
+Platform Engineer
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="faq">
+
+<div class="section-heading">
+
+<span class="mini-title">
+
+FAQ
+
+</span>
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<h3>
+
+Can I integrate GitHub?
+
+</h3>
+
+<p>
+
+Yes. GitHub, GitLab and Bitbucket are fully supported.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Does TechNova support AWS?
+
+</h3>
+
+<p>
+
+Yes. EC2, ALB, Auto Scaling Groups, S3, Route53, IAM, CloudWatch and many more.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Can I deploy Docker containers?
+
+</h3>
+
+<p>
+
+Absolutely. Docker and Kubernetes deployments are supported out of the box.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Is monitoring included?
+
+</h3>
+
+<p>
+
+Real-time logs, deployment history, health monitoring and analytics are included.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+      <div class="section-heading">
+
+<span class="mini-title">
+
+CONTACT
+
+</span>
+
+<h2>
+
+Let's Build Something Incredible
+
+</h2>
+
+<p>
+
+Have a project in mind? We'd love to hear from you.
+
+</p>
+
+</div>
+
+<div class="contact-wrapper">
+
+<div class="contact-info">
+
+<div class="info-box">
+
+<div class="info-icon">📍</div>
+
+<div>
+
+<h3>Office</h3>
+
+<p>Bangalore, Karnataka, India</p>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<div class="info-icon">📧</div>
+
+<div>
+
+<h3>Email</h3>
+
+<p>contact@technova.com</p>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<div class="info-icon">📞</div>
+
+<div>
+
+<h3>Phone</h3>
+
+<p>+91 98765 43210</p>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<div class="info-icon">⏰</div>
+
+<div>
+
+<h3>Working Hours</h3>
+
+<p>Monday - Friday • 9:00 AM - 6:00 PM</p>
+
+</div>
+
+</div>
+
+</div>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="text" placeholder="Company">
+
+<textarea rows="7" placeholder="Tell us about your project..."></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h2>
+
+TechNova
+
+</h2>
+
+<p>
+
+Modern DevOps platform helping engineering teams automate
+their CI/CD pipelines with confidence.
+
+</p>
+
+<div class="social-icons">
+
+<a href="#">🐙</a>
+
+<a href="#">💼</a>
+
+<a href="#">🐦</a>
+
+<a href="#">▶️</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3>
+
+Company
+
+</h3>
+
+<ul>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Careers</a></li>
+
+<li><a href="#">Blog</a></li>
+
+<li><a href="#">Partners</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Resources
+
+</h3>
+
+<ul>
+
+<li><a href="#">Documentation</a></li>
+
+<li><a href="#">API</a></li>
+
+<li><a href="#">Help Center</a></li>
+
+<li><a href="#">Community</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Solutions
+
+</h3>
+
+<ul>
+
+<li><a href="#">AWS</a></li>
+
+<li><a href="#">Docker</a></li>
+
+<li><a href="#">Kubernetes</a></li>
+
+<li><a href="#">Terraform</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 TechNova. All Rights Reserved.
+
+</p>
+
+<p>
+
+Designed & Developed by Abhishek Rao
 
 </p>
 
@@ -877,251 +1057,7 @@ GitHub • Jenkins • Maven • AWS • Tomcat • Nginx
 
 </footer>
 
-<style>
-
-footer{
-
-margin-top:120px;
-
-padding:80px 10%;
-
-background:rgba(255,255,255,.03);
-
-border-top:1px solid rgba(255,255,255,.08);
-
-text-align:center;
-
-}
-
-.footer-container h2{
-
-font-size:34px;
-
-color:#66A8FF;
-
-margin-bottom:20px;
-
-}
-
-.footer-container p{
-
-color:#AAB8D1;
-
-line-height:30px;
-
-margin-bottom:25px;
-
-}
-
-.footer-links{
-
-display:flex;
-
-justify-content:center;
-
-gap:35px;
-
-margin-bottom:35px;
-
-flex-wrap:wrap;
-
-}
-
-.footer-links a{
-
-text-decoration:none;
-
-color:white;
-
-transition:.35s;
-
-}
-
-.footer-links a:hover{
-
-color:#66A8FF;
-
-}
-
-.copyright{
-
-font-size:15px;
-
-color:#7F8CA5;
-
-}
-
-/* ==========================
-      Scroll Animation
-========================== */
-
-.hidden{
-
-opacity:0;
-
-transform:translateY(60px);
-
-transition:1s;
-
-}
-
-.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-/* ==========================
-      Responsive
-========================== */
-
-@media(max-width:900px){
-
-.hero h1{
-
-font-size:55px;
-
-line-height:65px;
-
-}
-
-nav{
-
-padding:18px 25px;
-
-}
-
-nav ul{
-
-display:none;
-
-}
-
-.section-title{
-
-font-size:36px;
-
-}
-
-.pipeline{
-
-flex-direction:column;
-
-}
-
-.arrow{
-
-transform:rotate(90deg);
-
-}
-
-}
-
-@media(max-width:600px){
-
-.hero h1{
-
-font-size:42px;
-
-line-height:50px;
-
-}
-
-.hero p{
-
-font-size:17px;
-
-line-height:30px;
-
-}
-
-.logo{
-
-font-size:24px;
-
-}
-
-.btn{
-
-width:100%;
-
-text-align:center;
-
-}
-
-}
-
-</style>
-
-<script>
-
-/* Fade Animation */
-
-const observer = new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-});
-
-document.querySelectorAll(".section,.card,.stat").forEach(el=>{
-
-el.classList.add("hidden");
-
-observer.observe(el);
-
-});
-
-/* Navbar Background */
-
-window.addEventListener("scroll",()=>{
-
-const nav=document.querySelector("nav");
-
-if(window.scrollY>80){
-
-nav.style.background="rgba(10,15,25,.90)";
-
-nav.style.boxShadow="0 10px 40px rgba(0,0,0,.35)";
-
-}else{
-
-nav.style.background="rgba(255,255,255,.05)";
-
-nav.style.boxShadow="none";
-
-}
-
-});
-
-/* Smooth Button Effect */
-
-document.querySelectorAll(".btn").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.transform="translateY(-6px)";
-
-});
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="translateY(0px)";
-
-});
-
-});
-
-</script>
+<script src="js/app.js"></script>
 
 </body>
 

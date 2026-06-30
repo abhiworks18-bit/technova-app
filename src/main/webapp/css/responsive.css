@@ -1,0 +1,308 @@
+/* =====================================================
+   TechNova Premium DevOps SaaS
+   File : src/main/webapp/css/responsive.css
+===================================================== */
+
+/* ===========================
+        LARGE TABLETS
+=========================== */
+
+@media(max-width:1200px){
+
+.hero{
+
+    gap:50px;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    line-height:76px;
+
+}
+
+.dashboard{
+
+    max-width:480px;
+
+}
+
+}
+
+/* ===========================
+          TABLETS
+=========================== */
+
+@media(max-width:992px){
+
+nav{
+
+    padding:18px 30px;
+
+}
+
+nav ul{
+
+    gap:25px;
+
+}
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding-top:180px;
+
+}
+
+.hero-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.hero p{
+
+    max-width:100%;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-stats{
+
+    justify-content:center;
+
+}
+
+.dashboard{
+
+    margin-top:30px;
+
+}
+
+.contact-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ===========================
+          MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+nav{
+
+    width:95%;
+
+    padding:18px 22px;
+
+}
+
+nav ul{
+
+    display:none;
+
+}
+
+.nav-btn{
+
+    padding:12px 22px;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+}
+
+.hero{
+
+    padding:150px 25px 80px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    line-height:58px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+    line-height:30px;
+
+}
+
+.hero-buttons{
+
+    width:100%;
+
+    flex-direction:column;
+
+}
+
+.primary-btn,
+
+.secondary-btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.hero-stats{
+
+    gap:30px;
+
+}
+
+.section{
+
+    padding:90px 25px;
+
+}
+
+.section-heading h2{
+
+    font-size:36px;
+
+}
+
+.section-heading p{
+
+    font-size:16px;
+
+}
+
+.pipeline{
+
+    flex-direction:column;
+
+}
+
+.pipeline-arrow{
+
+    transform:rotate(90deg);
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+}
+
+/* ===========================
+        SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.hero h1{
+
+    font-size:38px;
+
+    line-height:48px;
+
+}
+
+.badge{
+
+    font-size:13px;
+
+}
+
+.dashboard{
+
+    width:100%;
+
+}
+
+.terminal{
+
+    padding:20px;
+
+}
+
+.terminal p{
+
+    font-size:14px;
+
+}
+
+.feature-card,
+
+.price-card,
+
+.stat-card,
+
+.testimonial-card,
+
+.info-box{
+
+    padding:25px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea{
+
+    padding:16px;
+
+}
+
+.contact-form button{
+
+    padding:16px;
+
+}
+
+.hero-stats{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+}
