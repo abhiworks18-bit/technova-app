@@ -75,7 +75,7 @@ Deploy.
 
 Scale.
 
-Automate.
+Dominate.
 
 <span>Everything.</span>
 
@@ -83,9 +83,8 @@ Automate.
 
 <p>
 
-A premium DevOps platform built for modern engineering teams.
-Automate your CI/CD pipeline with GitHub, Jenkins, Maven,
-Docker, Kubernetes, AWS, Terraform and Nginx.
+Version 2 successfully deployed through GitHub, Jenkins,
+Maven, Tomcat, Auto Scaling Groups and Application Load Balancer.
 
 </p>
 
