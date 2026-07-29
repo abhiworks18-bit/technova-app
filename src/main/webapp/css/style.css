@@ -9,7 +9,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Inter',sans-serif;
     scroll-behavior:smooth;
 }
 
@@ -126,9 +126,17 @@ nav{
 
 .logo{
 
-    font-size:30px;
-    font-weight:800;
-    color:var(--primary);
+font-family:"Space Grotesk",sans-serif;
+
+font-size:32px;
+
+font-weight:700;
+
+letter-spacing:-1px;
+
+color:white;
+
+transition:.3s;
 
 }
 
